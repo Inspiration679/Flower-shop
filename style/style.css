@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background-header{
+
+    background:url("../img/Flowers.jpg") no-repeat ;
+    display: block;
+    position: relative;
+    height: 960px;
+    background-position: center;
+    background-size: cover;
+}
+.background-body{
+    background-color: #FFFFFF;
+}
+
+.s1{
+    margin-left: 19.53125%;
+}
+.s2 {
+    margin-left: 24.7395833333%;
+}
+
+.s3 {
+    margin-left: 29.9479166666%;
+}
+
+.s4 {
+    margin-left: 35.1562499999%;
+}
+
+.s5 {
+    margin-left: 40.364583333199995%;
+}
+
+.s6 {
+    margin-left: 45.57291666649999%;
+}
+
+.s7 {
+    margin-left: 50.78124999979999%;
+}
+
+.s8 {
+    margin-left: 55.989583333099986%;
+}
+
+.s9 {
+    margin-left: 61.19791666639998%;
+}
+
+.s10 {
+    margin-left: 66.40624999969998%;
+}
+
+.s11 {
+    margin-left: 71.61458333299998%;
+}
+
+.s12 {
+    margin-left: 76.82291666629999%;
+}
+
+.nav{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    color: #FFFFFF
+}
+
+a{color: #FFFFFF}
+li{
+    display:inline-block
+}
