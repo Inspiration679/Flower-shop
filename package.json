@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/Inspiration679/Mogila#readme",
   "dependencies": {
-    "consolidate": "^0.16.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2"
   },
