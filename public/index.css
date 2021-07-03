@@ -4,12 +4,10 @@
     box-sizing: border-box;
 }
 .background-header{
-
-    background:url("../img/Flowers.jpg") no-repeat ;
     display: block;
     position: relative;
     height: 960px;
-    background-position: center;
+    background: url("img/Flowers.jpg") no-repeat center;
     background-size: cover;
 }
 .background-body{
@@ -18,13 +16,12 @@
 header{
     display: flex;
     padding-top: 36px;
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 32px;
     color: #FFFFFF;
-    padding-top: 36px;
 }
 .s1{
     margin-left: 19%;
