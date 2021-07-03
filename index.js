@@ -7,6 +7,7 @@ const flowersRoutes = require('./routes/flowers')
 const aboutRoutes = require('./routes/about')
 const contactsRoutes = require('./routes/contacts')
 const cartRoutes = require('./routes/cart')
+const supportRoutes = require('./routes/support')
 
 const app = express()
 
@@ -21,7 +22,6 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 
 app.use(express.static(path.join(__dirname, 'public')))
-
 app.use(express.urlencoded({extended: true}))
 
 
@@ -32,6 +32,7 @@ app.use('/flowers', flowersRoutes)
 app.use('/about', aboutRoutes)
 app.use('/contacts', contactsRoutes)
 app.use('/cart', cartRoutes)
+app.use('/support', supportRoutes)
 
 
 app.listen(PORT, () => {
