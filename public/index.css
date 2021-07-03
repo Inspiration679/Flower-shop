@@ -15,7 +15,12 @@
 header {
     display: flex;
     padding-top: 36px;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
     line-height: 32px;
+    color: #FFFFFF;
 }
 
 .s1 {
@@ -78,9 +83,12 @@ sec1 {
     display: flex;
     width: 968px;
     height: 489px;
-    margin-left: 5.2083333333%;
+    margin-left: 10.4%;
     margin-top: 177px;
+}
 
+.dop_sec2 {
+    margin-left: 30px;
 }
 
 .dop_sec2 img {
@@ -88,51 +96,62 @@ sec1 {
     height: 489px;
 }
 
-.foot {
-    background: #000;
-    height: 186px;
-}
-
-.flex_foot {
-    display: flex;
-    align-items: center;
-}
-
-.foot_menu {
-    margin-left: 114px;
-    margin-right: 114px;
-}
-
-.foot_menu ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.foot_menu ul li {
-    margin: 0 30px 0 30px;
-    white-space: nowrap;
-}
-
-.foot_logos {
-    display: flex;
-    align-items: end;
-    justify-content: flex-end
-}
-
-.foot_logos ul li {
-    margin-left: 18px;
-}
-
-.font-menu {
-    font-family: Montserrat, serif;
+.dop_sec1 {
+    width: 370px;
+    margin-top: 75px;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
     color: #FFFFFF;
+    font-weight: 300;
 }
 
-.dop_sec1{
-    width: 568px;
+.dop_sec1_text1 {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.dop_sec1_text2 {
+    margin-top: 39px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.dop_sec1_button {
+    margin-top: 45px;
+
+}
+
+.button_buy {
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+
+}
+
+sec2{
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    width: 1170px;
+    height: 360px;
+    margin-top: 264px;
+}
+.sec2_text{
+    width: 643px;
+
+}
+.sec2_img{
+    width: 537px;
+    height: 354px;
+    background: url("img/image 4.png") no-repeat center;
+    background-size: cover;
 }
