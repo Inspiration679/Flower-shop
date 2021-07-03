@@ -83,15 +83,53 @@ sec1 {
     display: flex;
     width: 968px;
     height: 489px;
-    margin-left: 5.2083333333%;
+    margin-left: 10.4%;
     margin-top: 177px;
+}
 
+.dop_sec2 {
+    margin-left: 30px;
 }
 
 .dop_sec2 img {
     width: 568px;
     height: 489px;
 }
-.dop_sec1{
-    width: 568px;
+
+.dop_sec1 {
+    width: 370px;
+    margin-top: 75px;
+    font-family: Roboto;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.dop_sec1_text1 {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.dop_sec1_text2 {
+    margin-top: 39px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.dop_sec1_button {
+    margin-top: 45px;
+
+}
+
+.button_buy {
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+
 }
