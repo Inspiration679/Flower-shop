@@ -3,17 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
-.background-header{
+
+.background-header-sec1 {
     display: block;
     position: relative;
     height: 960px;
     background: url("img/Flowers.jpg") no-repeat center;
     background-size: cover;
 }
-.background-body{
-    background-color: #FFFFFF;
-}
-header{
+
+header {
     display: flex;
     padding-top: 36px;
     font-family: Montserrat, serif;
@@ -23,55 +22,68 @@ header{
     line-height: 32px;
     color: #FFFFFF;
 }
-.s1{
-    margin-left: 19%;
+
+.s1 {
+    margin-left: 19.5%;
+    margin-right: 19.5%;
 }
 
-.main{
-    margin-right: 49px;
-}
-.about{
-    margin-right: 63px;
-}
-.flowers{
-    margin-right: 63px;
-}
-.nav{
+
+.nav {
     margin-top: 28px;
 
 
 }
-.contacts{
-    margin-right: 63px;
 
+.nav li {
+    margin-right: 84px;
 }
 
-a{color: #FFFFFF;
-    text-decoration: none;}
-ul{
-    display:flex;
+a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
-li{
+
+ul {
+    display: flex;
+}
+
+li {
     list-style-type: none;
 }
-.img1{
-    margin-right: 63px;
+
+.img1 {
+    margin-right: 4.739%;
     height: 93px;
     width: 233px;
 }
-a:hover{
+
+a:hover {
     color: gray;
 }
-.cart_img{
+
+.cart_img {
     width: 41px;
     height: 46px;
     margin-right: 9px;
 
 }
-.cart{
+
+.cart {
     display: flex;
     margin-top: 28px;
 }
-.cart a{
+
+.cart a {
     display: flex;
+}
+
+sec1 {
+    width: 968px;
+    height: 489px;
+}
+
+.dop_sec1 img {
+    width: 568px;
+    height: 489px;
 }
