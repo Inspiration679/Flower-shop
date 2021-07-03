@@ -37,6 +37,7 @@ header {
 
 .nav li {
     margin-right: 84px;
+    white-space: nowrap
 }
 
 a {
@@ -79,11 +80,18 @@ a:hover {
 }
 
 sec1 {
+    display: flex;
     width: 968px;
     height: 489px;
+    margin-left: 5.2083333333%;
+    margin-top: 177px;
+
 }
 
-.dop_sec1 img {
+.dop_sec2 img {
     width: 568px;
     height: 489px;
+}
+.dop_sec1{
+    width: 568px;
 }
