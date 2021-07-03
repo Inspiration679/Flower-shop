@@ -62,16 +62,16 @@ li{
 a:hover{
     color: gray;
 }
-.img2{
+.cart_img{
     width: 41px;
     height: 46px;
     margin-right: 9px;
 
 }
-.korzina{
+.cart{
     display: flex;
     margin-top: 28px;
 }
-.korzina a{
+.cart a{
     display: flex;
 }
