@@ -1,17 +1,27 @@
 {{> head }}
 
 <body>
-<div class="background-header-sec1">
-    <div class="s1 ">
-        <div>
-            {{> header}}
 
+{{#if isHome}}
+    <div class="background-header-sec1">
+        <div class="s1 ">
+            <div>
+                {{> header}}
+            </div>
+            {{{ body }}}
         </div>
-        {{{ body }}}
-
+        {{> foot}}
     </div>
-    {{> foot}}
-</div>
-
+{{else}}
+    <div class="background-color">
+        <div class="s1 ">
+            <div>
+                {{> header}}
+            </div>
+            {{{ body }}}
+        </div>
+        {{> foot}}
+    </div>
+{{/if}}
 {{> footer}}
 </body>
