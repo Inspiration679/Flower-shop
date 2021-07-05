@@ -2,6 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const path = require('path')
 
+const db = require('./db_connect/db')
 const homeRoutes = require('./routes/home')
 const flowersRoutes = require('./routes/flowers')
 const aboutRoutes = require('./routes/about')
@@ -10,7 +11,6 @@ const cartRoutes = require('./routes/cart')
 const supportRoutes = require('./routes/support')
 
 const app = express()
-
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -35,7 +35,19 @@ app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 
 
-app.listen(PORT, () => {
-    console.log(`Server has started on port: ${PORT}`)
-})
+
+
+async function start(){
+    try {
+        db.db.connect()
+        app.listen(PORT, () => {
+            console.log(`Server has started on port: ${PORT}`)
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+start()
+
 
