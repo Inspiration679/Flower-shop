@@ -204,3 +204,17 @@ section2 {
     font-size: 26px;
     color: #FFFFFF;
 }
+
+.card-container {
+    width: 300px;
+    height: 400px;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+}
+
+.card-text {
+
+}

@@ -4,15 +4,7 @@ const router = Router()
 
 router.get('/', async (req, res) => {
     try{
-        const flower = await Flower.create({
-            flower_name: 'Fikus',
-            cost: 200,
-            _description: 'good plant',
-            image: 'www'
-        })
-        const temp = await Flower.findAll({
-            attributes: ['flower_name', 'cost']
-        })
+        const temp = await Flower.findAll({where:{flower_name: "Fikus"}, raw:true})
         console.log(temp)
         res.render('flowers', {
             title: 'Цветы',
