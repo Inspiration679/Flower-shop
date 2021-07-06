@@ -1,24 +1,29 @@
-const mysql = require('mysql2')
+const Sequelize = require('sequelize')
+const sequelize = require('../db_connect/db')
 
-class Flower {
-    constructor(flower_name, cost, description, image) {
-        this.flower_name = flower_name
-        this.cost = cost
-        this.description = description
-        this.image = image
+const flower = sequelize.define('flowers', {
+    idflowers: {
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+        type: Sequelize.INTEGER
+    },
+    flower_name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    cost: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    _description: {
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
+    image: {
+        type: Sequelize.STRING,
+        allowNull: true
     }
+})
 
-    get(flower_name){
-
-    }
-
-    getAll(){
-
-    }
-
-    save(){
-
-    }
-}
-
-module.exports = Flower
+module.exports = flower

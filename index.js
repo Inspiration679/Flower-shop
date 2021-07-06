@@ -2,7 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const path = require('path')
 
-const db = require('./db_connect/db')
+const sequelize = require('./db_connect/db')
 const homeRoutes = require('./routes/home')
 const flowersRoutes = require('./routes/flowers')
 const aboutRoutes = require('./routes/about')
@@ -35,12 +35,10 @@ app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 
 
-
-
 async function start(){
     try {
-        db.db.connect()
-        app.listen(PORT, () => {
+         await sequelize.sync()
+         app.listen(PORT, () => {
             console.log(`Server has started on port: ${PORT}`)
         })
     } catch (e) {
