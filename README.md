@@ -1,2 +1,2 @@
-# Mogila
-Pizdec
+# Flower Shop
+Test project for training

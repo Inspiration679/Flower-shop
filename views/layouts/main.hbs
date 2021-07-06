@@ -12,17 +12,21 @@
         </div>
         {{> foot}}
     </div>
+
 {{else}}
-    <div>
-        <div class="grad">
-            <div class="indent ">
+    <div class="header-other  grad">
+        <div class="indent">
+            <div>
                 {{> header}}
-                {{{ body }}}
             </div>
-            {{> foot}}
+            {{{ body }}}
         </div>
+        {{> foot}}
     </div>
-    </div>
+
+
+
+
 {{/if}}
 {{> footer}}
 </body>
