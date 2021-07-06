@@ -4,7 +4,12 @@ const router = Router()
 
 router.get('/', async (req, res) => {
     try{
-        const temp = await Flower.findAll({where:{flower_name: "Fikus"}, raw:true})
+        const temp = await Flower.findAll({
+            where:{
+                flower_name: "Fikus"
+            },
+            raw:true
+        })
         console.log(temp)
         res.render('flowers', {
             title: 'Цветы',

@@ -42,11 +42,7 @@ header {
     display: flex;
     padding-top: 36px;
     line-height: 32px;
-}
-
-.header-nav {
-    margin-top: 28px;
-
+    align-items: center;
 }
 
 .header-nav li {
@@ -71,11 +67,11 @@ header {
 
 .header-cart {
     display: flex;
-    margin-top: 28px;
 }
 
 .header-cart a {
     display: flex;
+    align-items: center;
 }
 
 section1 {
