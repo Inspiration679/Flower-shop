@@ -3,15 +3,27 @@
         <li><a href="#">Цвет</a></li>
         <li><a href="#">Цена</a></li>
         <li><a href="#">Название</a></li>
+
     </ul>
 </div>
+
 <div class="goods">
+    {{#each flowers}}
     <div class="rectangle">
+
         <div class="flower-img">
-            <img src="/img/Rectangle 9.png" alt="logo">
+            <img src="{{Img}}" alt="logo">
         </div>
-        <div class="flower-text">
-            <p>Пример текста</p>
+        <div class="flower-name">
+            <p>{{Name}}</p>
+        </div>
+
+        <div class="flower-price">
+            <p>{{Price}}</p>
+        </div>
+        <div class="flower-button-div">
+            <button type="submit" class="flower-button">Приобрести цветочки</button>
         </div>
     </div>
+        {{/each}}
 </div>

@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -239,29 +239,62 @@ section2 {
     color:gray ;
 }
 .rectangle{
+    display: flex;
     background-color: #EFEFEF;
-    width: 300px;
-    height: 350px;
-}
-.flower-img{
-    width: 270px;
-    height: 270px;
-    padding-top: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 968.62px;
+    height: 160px;
+    border-radius: 25px;
+    margin-bottom: 20px;
 
 }
-.flower-text{
+
+.flower-name{
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 32px;
-    padding-top: 18px;
-    padding-right: 48px;
-    padding-left: 49px;
-
+    width: 200px;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 121px;
+    padding-top: 65px;
 }
 .goods{
-    margin-top: 169px;
+    margin-top: 100px;
+    margin-left:100px;
+
+}
+.flower-img{
+    padding-top: 10px;
+    padding-left: 14px;
+    width: 179.89px;
+    height: 140px;
+}
+.flower-img img{
+    width: 179.89px;
+    height: 140px;
+    border-radius: 25px;
+}
+.flower-price {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    width: 175px;
+    font-size: 24px;
+    line-height: 29px;
+    padding-top: 65px;
+    padding-left: 75px;
+}
+.flower-button{
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+}
+.flower-button-div{
+    padding-top: 45px;
 }
