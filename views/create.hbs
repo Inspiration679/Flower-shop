@@ -1,0 +1,24 @@
+<style>
+    .container {
+        padding-top: 40px;
+    }
+</style>
+<div class="container">
+<h1>Добавление цвтов</h1>
+<form action="/create-add" method="POST" enctype="multipart/form-data">
+    <label>Название цветка</label><br>
+    <input name="flower_name" class="field" required><br><br>
+
+    <label>Стоимость</label><br>
+    <input name="cost" type="number" class="field" min="1" required><br><br>
+
+    <label>Описание</label><br>
+    <input name="description" type="text" class="field" required><br><br>
+
+    <label>Фотография</label><br>
+    <input name="image" type="file" class="field" required><br><br>
+
+    <input type="submit" value="Отправить" />
+</form>
+<!--<a href="/">К списку пользователей</a>-->
+</div>
