@@ -182,7 +182,9 @@ section2 {
     margin: 0 30px 0 30px;
     white-space: nowrap;
 }
-
+.аaaaa{
+    background-color: red;
+}
 .foot_logos {
     display: flex;
     align-items: end;
@@ -200,17 +202,7 @@ section2 {
     font-size: 26px;
     color: #FFFFFF;
 }
-
-.card-container {
-    width: 300px;
-    height: 400px;
-}
-
-.card-image {
-    width: 300px;
-    height: 200px;
-}
-
-.card-text {
-
+.grad{
+    height: 217px;
+    background: linear-gradient(to bottom, #000000, #FFFFFF);
 }
