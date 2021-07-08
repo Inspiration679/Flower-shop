@@ -17,7 +17,8 @@ router.post('/', (req, res) => {
         const cost = req.body.cost
         const description = req.body.description
         const _image = req.file
-        const image = req.file.path
+        const image = req.file.path.replace('public', '')
+        console.log(image)
 
         res.status(200)
 

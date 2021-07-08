@@ -1,29 +1,29 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db_connect/db')
 
-const flower = sequelize.define('animes', {
-    ID: {
+const flower = sequelize.define('flowers', {
+    idflowers: {
         primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
         type: Sequelize.INTEGER
     },
-    Name: {
+    flower_name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    Price: {
+    cost: {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    Img: {
-        primaryKey: true,
-        type: Sequelize.TEXT
-    },
-    Description: {
+    _description: {
         type: Sequelize.TEXT,
         allowNull: false
     },
-
-
+    image: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
 })
 
 module.exports = flower
