@@ -1,0 +1,57 @@
+<script>$(function () {
+    $(".btn").click(function () {
+        $(".regist-active").toggleClass("registr-inactive");
+        $(".login-inactive").toggleClass("login-active");
+        $(".signup-inactive").toggleClass("signup-active");
+        $(".signin-active").toggleClass("signin-inactive");
+        $(".reg-button-div-active").toggleClass("reg-button-div-inactive");
+        $(".log-button-div-inactive").toggleClass("log-button-div-active");
+    });
+});</script>
+
+
+<div class="login-registration">
+    <ul>
+        <li class="btn signin-active"><a href="#" >Регистрация</a></li>
+        <li class="btn signup-inactive"><a href="#">Вход</a></li>
+    </ul>
+</div>
+<div class="all">
+    <div class=" regist-active">
+        <form action="#" class="registr-form ">
+            <div class="regist-input1">
+                <label>Email:</label>
+                <input type="text" class="eeee">
+            </div>
+            <div class="registr-input2">
+                <label>Пароль:</label>
+                <input type="password">
+            </div>
+            <div class="registr-input3">
+                <label>Повторите пароль:</label>
+                <input type="password">
+            </div>
+        </form>
+
+    </div>
+    <div class="reg-button-div-active ">
+        <button class="reg-button">Зарегистроваться</button>
+    </div>
+    <div class="login-inactive">
+        <form action="#" class="">
+            <div class="login-input1">
+                <label>Логин:</label>
+                <input  type="text" class=>
+            </div>
+            <div class="login-input2">
+                <label>Пароль:</label>
+                <input type="password">
+            </div>
+        </form>
+    </div>
+    <div class="log-button-div-inactive ">
+        <button class="log-button">Вход</button>
+    </div>
+
+</div>
+

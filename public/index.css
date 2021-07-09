@@ -1,9 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    width: 1920px;
+    height: auto;
+    margin: auto;
 
+}
 .background-color-header {
     background: linear-gradient(#000000, #ffffff);
 }
@@ -11,7 +16,7 @@
 /*.background-color {*/
 /*    background: black;*/
 /*}*/
-.header-other{
+.header-other {
     display: flex;
     flex-direction: column;
 }
@@ -88,7 +93,7 @@ section1 {
     width: 968px;
     height: 489px;
     margin-left: 10.4%;
-    margin-top: 177px;
+    margin-top: 99px;
 }
 
 .section1-div-image {
@@ -212,14 +217,15 @@ section2 {
     font-size: 26px;
     color: #FFFFFF;
 }
-.grad{
+
+.grad {
     height: 170px;
     background: linear-gradient(to bottom, #000000, #FFFFFF);
-    border-bottom-style: solid ;
-    border-bottom-width: 1px ;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 }
 
-.Sort{
+.Sort {
     width: 570px;
     font-family: Montserrat;
     font-style: normal;
@@ -228,17 +234,21 @@ section2 {
     line-height: 32px;
     margin-left: 149px;
 }
-.Sort li{
+
+.Sort li {
     margin-left: 151px;
 }
-.Sort a{
+
+.Sort a {
     color: #000000;
 
 }
-.Sort a:hover{
-    color:gray ;
+
+.Sort a:hover {
+    color: gray;
 }
-.rectangle{
+
+.rectangle {
     display: flex;
     background-color: #EFEFEF;
     width: 968.62px;
@@ -248,7 +258,14 @@ section2 {
 
 }
 
-.flower-name{
+.all {
+    overflow: hidden;
+    width: 934px;
+    height: 430px;
+    margin-bottom: 200px;
+}
+
+.flower-name {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -258,22 +275,26 @@ section2 {
     padding-left: 121px;
     padding-top: 65px;
 }
-.goods{
+
+.goods {
     margin-top: 100px;
-    margin-left:100px;
+    margin-left: 100px;
 
 }
-.flower-img{
+
+.flower-img {
     padding-top: 10px;
     padding-left: 14px;
     width: 179.89px;
     height: 140px;
 }
-.flower-img img{
+
+.flower-img img {
     width: 179.89px;
     height: 140px;
     border-radius: 25px;
 }
+
 .flower-price {
     font-family: Montserrat;
     font-style: normal;
@@ -284,7 +305,10 @@ section2 {
     padding-top: 65px;
     padding-left: 75px;
 }
-.flower-button{
+
+
+
+.flower-button {
     width: 370px;
     height: 61px;
     font-family: Roboto;
@@ -295,6 +319,230 @@ section2 {
     line-height: 28px;
     outline: none;
 }
-.flower-button-div{
+
+.flower-button-div {
     padding-top: 45px;
+}
+
+.login-registration {
+    float: none;
+    padding-left: 344px;
+    padding-top: 36px;
+
+
+}
+
+.login-registration a {
+    color: black;
+
+}
+
+.login-registration li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    margin-right: 228px;
+}
+
+.regist-active {
+    transition: all .25s ease;
+
+    margin-top: 87px;
+    width: 955px;
+    height: 218px;
+}
+
+.registr-form {
+
+    margin-bottom: 100px;
+    margin-left: 15px;
+
+}
+
+input {
+
+    text-align: center;
+    width: 670px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+
+}
+
+label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    margin-right: 30px;
+    white-space: nowrap;
+
+}
+
+.regist-input1 {
+    display: flex;
+    margin-left: 175px;
+    height: 32px;
+}
+
+.registr-input2 {
+    display: flex;
+    margin-top: 68px;
+    margin-left: 148px;
+    height: 32px;
+}
+
+.registr-input3 {
+    display: flex;
+    margin-top: 54px;
+    height: 32px;
+}
+
+.reg-button {
+
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.reg-button-div-active {
+    margin-top: 58px;
+    margin-left: 420px;
+    transition: all .25s ease;
+}
+
+.registr-inactive {
+    transition: all .25s ease;
+    margin-top: 87px;
+    width: 955px;
+    height: 218px;
+    transform: translate(1000px);
+}
+
+.login-inactive {
+    transition: all .25s ease;
+    width: 955px;
+    height: 132px;
+}
+
+.login-input1 {
+    display: flex;
+    margin-left: 175px;
+    height: 32px;
+}
+
+.login-input2 {
+    display: flex;
+    margin-top: 68px;
+    margin-left: 148px;
+    height: 32px;
+}
+
+.login-active {
+    margin-top: 87px;
+    width: 955px;
+    height: 132px;
+
+    transition: all .25s ease;
+    transform: translateY(-450px);
+}
+
+.signin-active a {
+    padding-bottom: 10px;
+    color: gray;
+    border-bottom-color: gray;
+    text-decoration: none;
+    border-bottom: solid 2px;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.signin-inactive a {
+    padding-bottom: 0;
+
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.signup-active a {
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: gray;
+    border-bottom: solid 2px;
+    border-bottom-color: gray;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.signup-inactive a {
+    cursor: pointer;
+
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.reg-button-div-inactive {
+    margin-top: 58px;
+    margin-left: 420px;
+    transform: translate(1000px);
+    transition: all .25s ease;
+
+}
+
+.log-button {
+
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.log-button-div-inactive {
+    margin-top: 58px;
+    margin-left: 420px;
+    transition: all .25s ease;
+}
+
+.log-button-div-inactive {
+    margin-top: 58px;
+    margin-left: 420px;
+    transition: all .25s ease;
+
+}
+
+.log-button-div-active {
+    margin-top: 58px;
+    margin-left: 420px;
+    transition: all .25s ease;
+    transform: translateY(-450px);
+
 }
