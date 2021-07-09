@@ -15,10 +15,6 @@ const user = sequelize.define('users', {
     user_second_name: {
         type: Sequelize.STRING,
         allowNull: false
-    },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false
     }
 })
 
@@ -47,6 +43,10 @@ const password = sequelize.define('passwords', {
         type: Sequelize.INTEGER
     },
     password: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    email: {
         type: Sequelize.STRING,
         allowNull: false
     }
