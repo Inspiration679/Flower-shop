@@ -11,6 +11,7 @@ const contactsRoutes = require('./routes/contacts')
 const cartRoutes = require('./routes/cart')
 const supportRoutes = require('./routes/support')
 const createRoutes = require('./routes/create')
+const loginRoutes = require('./routes/login')
 
 const app = express()
 
@@ -57,6 +58,7 @@ app.use('/contacts', contactsRoutes)
 app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 app.use('/create', createRoutes)
+app.use('/login', loginRoutes)
 
 async function start(){
     try {
