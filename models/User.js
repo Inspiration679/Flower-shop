@@ -55,4 +55,4 @@ const password = sequelize.define('passwords', {
 user.hasMany(cart, {onDelete: "cascade"})
 user.hasMany(password, {onDelete: "cascade"})
 
-module.exports = user
+module.exports = {user, cart, password}

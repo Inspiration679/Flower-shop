@@ -9,31 +9,28 @@ router.get('/', async (req, res) => {
 
 router.post('/registration', async (req, res, next) => {
     if (req.body.password === req.body.repeatPassword) {
-        const userEmail = await User.findAll({
-            include: [passwords],
-            attributes: [req.body._email]
-        })
+        const userEmail = await User.password.findAll({
+            where: {email: req.body._email}
+        });
         if (userEmail.length === 0) {
             try {
                 const regPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null)
                 const regEmail = req.body._email
 
-                await User.create({password: regPassword, email: regEmail}, {include: [passwords]})
+                await User.password.create({password: regPassword, email: regEmail})
                 res.status(200)
+                res.redirect('/')
             } catch (e) {
                 console.log(e)
             }
         } else {
-            const err = new Error('Такой пользователь уже есть!');
-            err.status = 400;
-            next(err);
-            // console.log(err)
+            // log("Такой пользователь уже есть!")
+            res.redirect('/login')
         }
     } else {
-        const err = new Error('Пароли не совпадают!')
-        err.status = 400
-        next(err)
-        // console.log(err)
+        // alert("Пароли не совпадают!")
+
+        res.redirect('/login')
     }
 })
 
