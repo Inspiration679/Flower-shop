@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db_connect/db')
 
+
 const User = sequelize.define('users', {
     iduser: {
         primaryKey: true,
@@ -8,7 +9,7 @@ const User = sequelize.define('users', {
         allowNull: false,
         type: Sequelize.INTEGER
     },
-    user_first_name: {
+    login: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -17,6 +18,7 @@ const User = sequelize.define('users', {
         allowNull: false
     }
 }, { timestamps: false })
+
 
 const Cart = sequelize.define('cart', {
     id_cart: {
@@ -62,4 +64,6 @@ Cart.belongsTo(User)
 User.hasMany(Password, {onDelete: "cascade"})
 Password.belongsTo(User)
 
+
 module.exports = {User, Cart, Password}
+
