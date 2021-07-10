@@ -54,7 +54,19 @@ nav ul {
     display: flex;
 }
 
+nav img {
+    display: flex;
+    white-space: nowrap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    align-items: center;
+}
+
 header li {
+    display: flex;
     margin-right: 84px;
     white-space: nowrap;
     font-family: Montserrat;
@@ -85,30 +97,6 @@ header a:hover {
     background: url("img/Flowers.jpg") no-repeat center;
     background-size: cover;
 }
-
-.header-cart {
-    margin-top: 62px;
-    display: flex;
-    white-space: nowrap;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 32px;
-    width: 170px;
-    height: 46px;
-    align-items: center;
-}
-
-.header-cart a {
-    display: flex;
-}
-
-.header-cart img {
-    margin-right: 9px;
-
-}
-
 /*header*/
 
 /*section1*/
