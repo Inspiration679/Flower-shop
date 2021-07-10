@@ -1,29 +1,29 @@
-<div class="Sort">
-    <ul>
-        <li><a href="#">Цвет</a></li>
-        <li><a href="#">Цена</a></li>
-        <li><a href="#">Название</a></li>
-
-    </ul>
-</div>
-
-<div class="goods">
-    {{#each flowers}}
-    <div class="rectangle">
-
-        <div class="flower-img">
-            <img src="{{Img}}" alt="logo">
-        </div>
-        <div class="flower-name">
-            <p>{{Name}}</p>
-        </div>
-
-        <div class="flower-price">
-            <p>{{Price}}</p>
-        </div>
-        <div class="flower-button-div">
-            <button type="submit" class="flower-button">Приобрести цветочки</button>
-        </div>
+<div>
+    <div class="flowers-sort">
+        <ul>
+            <li><a href="#">Цвет</a></li>
+            <li><a href="#">Цена</a></li>
+            <li><a href="#">Название</a></li>
+        </ul>
     </div>
+    <div class="flowers-goods">
+        {{#each flowers}}
+            <div class="rectangle">
+
+                <div class="flower-img">
+                    <img src="{{Img}}" alt="logo">
+                </div>
+                <div class="flower-name">
+                    <p>{{Name}}</p>
+                </div>
+
+                <div class="flower-price">
+                    <p>{{Price}}</p>
+                </div>
+                <div class="flower-button">
+                    <button type="submit" >Приобрести цветочки</button>
+                </div>
+            </div>
         {{/each}}
+    </div>
 </div>

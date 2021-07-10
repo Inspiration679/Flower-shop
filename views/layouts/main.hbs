@@ -3,8 +3,8 @@
 <body>
 
 {{#if isHome}}
-    <div class="background-header-sec1">
-        <div class="indent ">
+    <div class="background">
+        <div class="indent  ">
             <div>
                 {{> header}}
             </div>
@@ -14,15 +14,17 @@
     </div>
 
 {{else}}
-    <div class="eader-other  grad">
-        <div class="indent">
-            <div>
-                {{> header}}
+
+
+            <div class="header-other ">
+                <div class="indent">{{> header}}</div>
+
             </div>
-            {{{ body }}}
-        </div>
+            <div class="indent">{{{ body }}}</div>
+
+
         {{> foot}}
-    </div>
+
 
 
 
