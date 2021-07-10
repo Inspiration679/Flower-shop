@@ -2,13 +2,13 @@ const Sequelize = require('sequelize')
 const sequelize = require('../db_connect/db')
 
 const user = sequelize.define('users', {
-    iduser: {
+    id: {
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
         type: Sequelize.INTEGER
     },
-    user_first_name: {
+    login: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -18,7 +18,7 @@ const user = sequelize.define('users', {
     }
 })
 
-const cart = sequelize.define('cart', {
+const cart = sequelize.define('carts', {
     id_cart: {
         primaryKey: true,
         autoIncrement: true,

@@ -214,6 +214,7 @@ footer {
     width: 235px;
     height: 100px;
     display: flex;
+    margin-top: 100px;
 }
 
 footer ul {
@@ -304,7 +305,7 @@ footer a:hover {
 
     width: 970px;
     height: auto;
-    margin-top: 109px;
+    margin-top: 87px;
     margin-left: 100px;
 }
 
@@ -314,7 +315,7 @@ footer a:hover {
     height: 160px;
     background: #EFEFEF;
     border-radius: 25px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .flower-img {
@@ -496,7 +497,7 @@ footer a:hover {
 
 .all {
     width: 955px;
-    height: 420px;
+    height: 410px;
     margin-top: 14px;
     margin-left: 15px;
     overflow: hidden;
@@ -586,3 +587,116 @@ footer a:hover {
 }
 
 /*login-reg*/
+
+/*about*/
+
+.about-block {
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 89px;
+}
+
+.about-block p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.about-block label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 67px;
+    color: #000000;
+}
+
+.about {
+    width: auto;
+    height: auto;
+}
+
+.addres {
+    height: auto;
+    width: auto;
+    margin-top: 84px;
+}
+
+.map {
+    height: auto;
+    width: auto;
+    margin-top: 84px;
+}
+
+#mapid {
+    width: 970px;
+    height: 374px;
+}
+
+/*about*/
+
+/*contacts*/
+.contacts {
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-top: 33px;
+    margin-left: 100px;
+    margin-bottom: 250px;
+}
+
+.contacts-text {
+    width: auto;
+    height: auto;
+}
+
+.contacts-text label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 67px;
+    color: #000000;
+}
+
+.contacts-text ul {
+    margin-top: 43px;
+}
+
+.contacts-text li {
+    list-style-type: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 40px;
+
+
+}
+
+.contacts-text a {
+    text-decoration: none;
+    color: black;
+    margin-left: 9px;
+}
+
+.contacts-text a:hover {
+    color: gray;
+}
+
+.contacts-img {
+    width: auto;
+    height: auto;
+}
+
+.contacts-img img {
+    width: 470px;
+    height: 460px;
+}
+
+/*contacts*/
