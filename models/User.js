@@ -15,10 +15,6 @@ const user = sequelize.define('users', {
     user_second_name: {
         type: Sequelize.STRING,
         allowNull: false
-    },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false
     }
 })
 
@@ -49,10 +45,14 @@ const password = sequelize.define('passwords', {
     password: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
 })
 
 user.hasMany(cart, {onDelete: "cascade"})
 user.hasMany(password, {onDelete: "cascade"})
 
-module.exports = user
+module.exports = {user, cart, password}

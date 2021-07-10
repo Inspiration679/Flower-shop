@@ -1,5 +1,6 @@
 const {Router} = require('express')
 const Flower = require('../models/Flower')
+const User = require('../models/User')
 const router = Router()
 
 router.get('/', async (req, res) => {
