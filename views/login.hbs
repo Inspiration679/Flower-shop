@@ -10,35 +10,42 @@
         <div class="registration-active">
             <form id="reg" action="/login/registration" method="post" enctype="multipart/form-data">
                 <div class="registration-input1" >
-                    <label for="">Почта:</label>
-                    <input type="email" name="_email" required>
+                    <label for="reg">Email:
+                        <input type="email" name="reg_email" required>
+                    </label>
                 </div>
                 <div class="registration-input2" >
-                    <label for="">Пароль:</label>
-                    <input type="password" name="password" minlength="8" required>
+                    <label for="reg">Пароль:
+                        <input type="password" name="reg_password" minlength="8" required>
+                    </label>
                 </div>
                 <div class="registration-input3" >
-                    <label for="">Повторите пароль:</label>
-                    <input  type="password" name="repeatPassword" minlength="8" required>
+                    <label for="reg">Повторите пароль:
+                        <input  type="password" name="reg_repeatPassword" minlength="8" required>
+                    </label>
                 </div>
             </form>
+
             <div class="registration-button">
                 <button type="submit" form="reg">Регистрация</button>
             </div>
         </div>
+
         <div class="login-inactive">
-            <form action="#" >
+            <form id="login" action="/login/log-in" method="post" enctype="multipart/form-data" >
                 <div class="login-input1" >
-                    <label for="">Логин:</label>
-                    <input type="text" required>
+                    <label for="login">Email:
+                        <input type="email" name="login_email" required>
+                    </label>
                 </div>
                 <div class="login-input2" >
-                    <label for="">Пароль:</label>
-                    <input type="password" required>
+                    <label for="login">Пароль:
+                        <input type="password" name="loginPassword" minlength="8" required>
+                    </label>
                 </div>
             </form>
             <div class="login-button">
-                <button type="submit" >Вход</button>
+                <button type="submit" form="login">Вход</button>
             </div>
         </div>
     </div>

@@ -1,7 +1,9 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
+const session = require('express-session')
 const path = require('path')
 const multer = require('multer')
+const passport = require('passport')
 
 const sequelize = require('./db_connect/db')
 const homeRoutes = require('./routes/home')
@@ -12,6 +14,7 @@ const cartRoutes = require('./routes/cart')
 const supportRoutes = require('./routes/support')
 const createRoutes = require('./routes/create')
 const loginRoutes = require('./routes/login')
+const varMiddleware = require('./middleware/variables')
 
 const app = express()
 
@@ -47,10 +50,14 @@ const fileFilter = (req, file, cb) => {
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
-app.use(multer({storage:storageConfig, fileFilter: fileFilter}).single("flower_image"));
-
-const PORT = process.env.PORT || 3000
-
+app.use(session({
+    secret: 'secret value',
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(varMiddleware)
+app.use(passport.initialize())
+app.use(passport.session())
 app.use('/', homeRoutes)
 app.use('/flowers', flowersRoutes)
 app.use('/about', aboutRoutes)
@@ -59,6 +66,12 @@ app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 app.use('/create', createRoutes)
 app.use('/login', loginRoutes)
+
+
+
+app.use(multer({storage:storageConfig, fileFilter: fileFilter}).single("flower_image"));
+
+const PORT = process.env.PORT || 3000
 
 async function start(){
     try {

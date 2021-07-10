@@ -4,20 +4,30 @@
     </div>
     <nav>
         <ul>
-            <li class="main"><a href="/">Главная</a></li>
+            {{#if isAuth}}
+                <li class="main"><a href="/">Главная</a></li>
 
-            <li><a href="flowers">Цветы</a></li>
+                <li><a href="flowers">Цветы</a></li>
 
-            <li><a href="about">О нас</a></li>
+                <li><a href="about">О нас</a></li>
 
-            <li><a href="login">Вход</a></li>
+                <li><a href="/login/logout">Выход</a></li>
+
+                <li><a href="/cart" style="display: flex;">
+                    <img src="/img/shopping-cart_1.png" style="padding-right: 5px" class="header-cart-img" alt="logo">
+                    <p>Корзина</p>
+                </a>
+                </li>
+            {{else}}
+                <li class="main"><a href="/">Главная</a></li>
+
+                <li><a href="flowers">Цветы</a></li>
+
+                <li><a href="about">О нас</a></li>
+
+                <li><a href="login">Вход</a></li>
+            {{/if}}
         </ul>
     </nav>
-    <div class="header-cart">
-        <a href="/cart" onclick="">
-            <img src="/img/shopping-cart_1.png" class="header-cart-img" alt="logo">
-            <p>Корзина</p>
-        </a>
-    </div>
 </header>
 

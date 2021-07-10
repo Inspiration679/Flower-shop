@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db_connect/db')
 
-const user = sequelize.define('users', {
+const User = sequelize.define('users', {
     iduser: {
         primaryKey: true,
         autoIncrement: true,
@@ -16,9 +16,9 @@ const user = sequelize.define('users', {
         type: Sequelize.STRING,
         allowNull: false
     }
-})
+}, { timestamps: false })
 
-const cart = sequelize.define('cart', {
+const Cart = sequelize.define('cart', {
     id_cart: {
         primaryKey: true,
         autoIncrement: true,
@@ -33,9 +33,9 @@ const cart = sequelize.define('cart', {
         type: Sequelize.INTEGER,
         allowNull: false
     }
-})
+}, { timestamps: false })
 
-const password = sequelize.define('passwords', {
+const Password = sequelize.define('passwords', {
     id: {
         primaryKey: true,
         autoIncrement: true,
@@ -49,10 +49,17 @@ const password = sequelize.define('passwords', {
     email: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    token: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        defaultValue: true
     }
-})
+}, { timestamps: false })
 
-user.hasMany(cart, {onDelete: "cascade"})
-user.hasMany(password, {onDelete: "cascade"})
+User.hasMany(Cart, {onDelete: "cascade"})
+Cart.belongsTo(User)
+User.hasMany(Password, {onDelete: "cascade"})
+Password.belongsTo(User)
 
-module.exports = {user, cart, password}
+module.exports = {User, Cart, Password}
