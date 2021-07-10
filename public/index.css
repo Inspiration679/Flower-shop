@@ -1,33 +1,78 @@
+/*Для всего*/
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+.header-other {
+    background: linear-gradient(#000000, #ffffff);
+    height: 170px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    display: flex;
+}
+
+/*Для всего*/
 body {
     width: 1920px;
-    height: auto;
-    margin: auto;
+    height: 1080px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
 
 }
-.background-color-header {
-    background: linear-gradient(#000000, #ffffff);
+
+/*Header*/
+.header-main {
+    width: 1170px;
+    height: 93px;
 }
 
-/*.background-color {*/
-/*    background: black;*/
-/*}*/
-.header-other {
+header {
+
     display: flex;
-    flex-direction: column;
 }
 
-.background-header-sec1 {
+.header-logo {
+    width: 235px;
+    height: 93px;
+    margin-top: 32px;
+}
+
+nav {
+    width: 649px;
+    height: 35px;
+    margin-top: 63px;
+    margin-left: 67px;
+}
+
+nav ul {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 960px;
-    background: url("img/Flowers.jpg") no-repeat center;
-    background-size: cover;
+}
+
+header li {
+    margin-right: 84px;
+    white-space: nowrap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    list-style-type: none;
+    color: #FFFFFF;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: gray;
 }
 
 .indent {
@@ -35,105 +80,79 @@ body {
     margin-right: 375px;
 }
 
-a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: gray;
-}
-
-ul {
-    display: flex;
-}
-
-li {
-    list-style-type: none;
-}
-
-header {
-    display: flex;
-    padding-top: 36px;
-    line-height: 32px;
-    align-items: center;
-    height: 170px;
-}
-
-.header-nav li {
-    margin-right: 84px;
-    white-space: nowrap
-}
-
-
-.header-logo {
-    margin-right: 84px;
-    height: 93px;
-    width: 233px;
-}
-
-
-.header-cart-img {
-    width: 41px;
-    height: 46px;
-    margin-right: 9px;
+.background {
+    height: 960px;
+    background: url("img/Flowers.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .header-cart {
+    margin-top: 62px;
     display: flex;
+    white-space: nowrap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    width: 170px;
+    height: 46px;
+    align-items: center;
 }
 
 .header-cart a {
     display: flex;
-    align-items: center;
 }
 
+.header-cart img {
+    margin-right: 9px;
+
+}
+
+/*header*/
+
+/*section1*/
 section1 {
+
     display: flex;
     width: 968px;
     height: 489px;
     margin-left: 10.4%;
 
-    margin-top: 99px;
-
-
+    margin-top: 177px;
 }
 
-.section1-div-image {
-    margin-left: 30px;
-}
-
-.section1-div-image img {
-    width: 568px;
-    height: 489px;
-}
-
-.section1-text-div-all {
+.section1-text1 {
     width: 370px;
-    margin-top: 75px;
+    height: 87px;
     font-family: Roboto;
     font-style: normal;
-    color: #FFFFFF;
     font-weight: 300;
-}
-
-.section1-text-div-txt1 {
     font-size: 36px;
     line-height: 36px;
+    color: #FFFFFF;
+    margin-top: 75px;
 }
 
-.section1-text-div-txt2 {
-    margin-top: 39px;
+.section1-text2 {
+    margin-top: 60px;
+    width: 370px;
+    height: 84px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
     font-size: 24px;
     line-height: 28px;
+    color: #FFFFFF;
 }
 
-.section1-text-div-button {
+.section1-button {
     margin-top: 45px;
-
+    width: 370px;
+    height: 61px;
 }
 
-.section1-text-button {
+.section1-button button {
     width: 370px;
     height: 61px;
     font-family: Roboto;
@@ -143,175 +162,204 @@ section1 {
     font-weight: 300;
     line-height: 28px;
     outline: none;
-
 }
 
+.section1-img {
+    width: 568px;
+    height: 489px;
+}
+
+.section1-img img {
+    width: 568px;
+    height: 489px
+}
+
+/*section1*/
+
+/*section2*/
+
 section2 {
+    width: 1170px;
+    height: 360px;
+    margin-top: 264px;
     display: flex;
+    margin-bottom: 67px;
+}
+
+.section2-text {
+    width: 643px;
+    height: 360px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 26px;
     line-height: 30px;
-    width: 1170px;
-    height: 360px;
-    margin-top: 264px;
-    margin-bottom: 30px;
+    color: #000000;
 }
 
-.section2-text-div {
-    width: 643px;
-
-}
-
-.section2-img-div {
-    width: 537px;
+.section2-img {
+    width: 527px;
     height: 354px;
-    background: url("img/image 4.png") no-repeat center;
-    background-size: cover;
 }
 
-.foot {
+.section2-img img {
+    width: 527px;
+    height: 354px;
+}
+
+/*section2*/
+
+/*footer*/
+footer {
+    width: 235px;
+    height: 100px;
     display: flex;
-    background: #000;
-    height: 160px;
-    left: 0;
-    bottom: 0;
 }
 
-.flex_foot {
+footer ul {
     display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 
-.foot_menu {
-    margin-left: 114px;
-    margin-right: 114px;
-}
-
-.foot_menu ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.foot_menu ul li {
-    margin: 0 30px 0 30px;
+.footer-menu li {
+    list-style-type: none;
     white-space: nowrap;
-}
-
-.foot_logos {
-    display: flex;
-    align-items: end;
-    justify-content: flex-end
-}
-
-.foot_logos ul li {
-    margin-left: 18px;
-}
-
-.font-menu {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    color: #FFFFFF;
-}
-
-.grad {
-    height: 170px;
-    background: linear-gradient(to bottom, #000000, #FFFFFF);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
-
-.Sort {
-    width: 570px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 32px;
-    margin-left: 149px;
+    margin-right: 94px;
+    color: white;
 }
 
-.Sort li {
-    margin-left: 151px;
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
-.Sort a {
-    color: #000000;
-
-}
-
-.Sort a:hover {
+footer a:hover {
     color: gray;
+}
+
+.footer-menu {
+    margin-top: 60px;
+    width: 552px;
+    height: 32px;
+    margin-left: 110px;
+}
+
+.footer-links {
+    width: 156px;
+    height: 40px;
+    margin-left: 114px;
+    margin-top: 50px;
+}
+
+.footer-links li {
+    margin-right: 18px;
+}
+
+.footer-background {
+    width: 1920px;
+    height: 186px;
+    background-color: #000000;
+}
+
+/*footer*/
+
+/*flowers*/
+.flowers-sort {
+    width: 570.23px;
+    height: 32px;
+    margin-left: 300px;
+}
+
+.flowers-sort ul {
+    display: flex;
+}
+
+.flowers-sort li {
+    list-style-type: none;
+    white-space: nowrap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    /* identical to box height */
+    margin-right: 151px;
+    color: #000000;
+}
+
+.flowers-sort a {
+    text-decoration: none;
+    color: black;
+}
+
+.flowers-sort a:hover {
+    color: gray;
+}
+
+.flowers-goods {
+
+    width: 970px;
+    height: auto;
+    margin-top: 109px;
+    margin-left: 100px;
 }
 
 .rectangle {
     display: flex;
-    background-color: #EFEFEF;
     width: 968.62px;
     height: 160px;
+    background: #EFEFEF;
     border-radius: 25px;
-    margin-bottom: 20px;
-
-}
-
-.all {
-    overflow: hidden;
-    width: 934px;
-    height: 430px;
-    margin-bottom: 200px;
-}
-
-.flower-name {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    width: 200px;
-    font-size: 24px;
-    line-height: 29px;
-    padding-left: 121px;
-    padding-top: 65px;
-}
-
-.goods {
-    margin-top: 100px;
-    margin-left: 100px;
-
+    margin-bottom: 50px;
 }
 
 .flower-img {
+    width: 179.89px;
+    height: 140px;
+    border-radius: 25px;
     padding-top: 10px;
     padding-left: 14px;
-    width: 180px;
-    height: 140px;
 }
 
 .flower-img img {
     width: 179.89px;
     height: 140px;
     border-radius: 25px;
+
 }
 
-.flower-price {
+.flower-name {
+    width: 250px;
+    height: 29px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    width: 175px;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 121px;
+    padding-top: 65px;
+}
+
+.flower-price {
+    width: 150px;
+    height: 100px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
     font-size: 24px;
     line-height: 29px;
     padding-top: 65px;
-    padding-left: 75px;
 }
 
-
-
 .flower-button {
+    padding-top: 45px;
+}
+
+.flower-button button {
     width: 370px;
     height: 61px;
     font-family: Roboto;
@@ -323,21 +371,14 @@ section2 {
     outline: none;
 }
 
-.flower-button-div {
-    padding-top: 45px;
-}
+/*flowers*/
 
+/*login-reg*/
 .login-registration {
-    float: none;
-    padding-left: 344px;
-    padding-top: 36px;
-
-
-}
-
-.login-registration a {
-    color: black;
-
+    width: 471px;
+    height: 32px;
+    margin-left: 344px;
+    margin-top: 36px;
 }
 
 .login-registration li {
@@ -346,72 +387,101 @@ section2 {
     font-weight: normal;
     font-size: 26px;
     line-height: 32px;
+
+    list-style-type: none;
+    white-space: nowrap;
     margin-right: 228px;
+
 }
 
-.regist-active {
+.login-registration ul {
+    display: flex;
+}
+
+.login-registration a {
+    text-decoration: none;
+
+}
+
+.login-registration a:hover {
+    color: gray;
+}
+
+.registration-active {
+    width: 955px;
+    height: 350px;
     transition: all .25s ease;
 
-    margin-top: 87px;
+
+}
+
+.registration-inactive {
     width: 955px;
-    height: 218px;
-}
+    height: 350px;
+    transform: translateX(1000px);
+    transition: all .25s ease;
 
-.registr-form {
-
-    margin-bottom: 100px;
-    margin-left: 15px;
 
 }
 
-input {
-
-    text-align: center;
-    width: 670px;
+.all input {
+    border-top: none;
     border-left: none;
     border-right: none;
-    border-top: none;
+    width: 615px;
     outline: none;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 32px;
+    text-align: center;
+
 
 }
 
-label {
+.registration-active div {
+    display: flex;
+    width: 955px;
+    height: 32px;
+
+
+}
+
+
+.all label {
+    white-space: nowrap;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 32px;
-    margin-right: 30px;
-    white-space: nowrap;
+    color: #000000;
+    padding-right: 30px;
+}
+
+.registration-input1 {
+    margin-top: 63px;
+    padding-left: 175px;
+}
+
+.registration-input2 {
+    margin-top: 63px;
+    padding-left: 153px;
+}
+
+.registration-input3 {
+    margin-top: 63px;
+    padding-left: 7px;
+}
+
+.registration-button {
+    margin-top: 47px;
+    margin-left: 412px;
 
 }
 
-.regist-input1 {
-    display: flex;
-    margin-left: 175px;
-    height: 32px;
-}
-
-.registr-input2 {
-    display: flex;
-    margin-top: 68px;
-    margin-left: 148px;
-    height: 32px;
-}
-
-.registr-input3 {
-    display: flex;
-    margin-top: 54px;
-    height: 32px;
-}
-
-.reg-button {
-
+.registration-button button {
     width: 370px;
     height: 61px;
     font-family: Roboto;
@@ -421,75 +491,86 @@ label {
     font-weight: 300;
     line-height: 28px;
     outline: none;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
 
 }
 
-.reg-button-div-active {
-    margin-top: 58px;
-    margin-left: 420px;
-    transition: all .25s ease;
-}
-
-.registr-inactive {
-    transition: all .25s ease;
-    margin-top: 87px;
+.all {
     width: 955px;
-    height: 218px;
-    transform: translate(1000px);
+    height: 420px;
+    margin-top: 14px;
+    margin-left: 15px;
+    overflow: hidden;
+    margin-bottom: 298px;
 }
 
 .login-inactive {
-    transition: all .25s ease;
     width: 955px;
-    height: 132px;
+    height: 350px;
+    transition: all .25s ease;
+}
+
+.login-inactive div {
+    display: flex;
+    width: 955px;
+    height: 32px;
 }
 
 .login-input1 {
-    display: flex;
-    margin-left: 175px;
-    height: 32px;
+
+    padding-left: 175px;
 }
 
 .login-input2 {
-    display: flex;
-    margin-top: 68px;
-    margin-left: 148px;
-    height: 32px;
+    margin-top: 63px;
+    padding-left: 153px;
+}
+
+.login-button {
+    margin-top: 47px;
+    margin-left: 412px;
+
+}
+
+.login-button button {
+    width: 370px;
+    height: 61px;
+    font-family: Roboto;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    outline: none;
+
 }
 
 .login-active {
-    margin-top: 87px;
     width: 955px;
-    height: 132px;
-
+    height: 350px;
+    transform: translateY(-350px);
     transition: all .25s ease;
-    transform: translateY(-450px);
 }
+
 
 .signin-active a {
     padding-bottom: 10px;
+
     color: gray;
-    border-bottom-color: gray;
-    text-decoration: none;
     border-bottom: solid 2px;
+    border-bottom-color: gray;
     transition: all .25s ease;
     cursor: pointer;
 }
 
 .signin-inactive a {
-    padding-bottom: 0;
-
+    color: black;
     text-decoration: none;
-    border-bottom: none;
     cursor: pointer;
 }
 
 .signup-active a {
     padding-bottom: 10px;
-    text-decoration: none;
+
     color: gray;
     border-bottom: solid 2px;
     border-bottom-color: gray;
@@ -498,54 +579,10 @@ label {
 }
 
 .signup-inactive a {
+    color: black;
     cursor: pointer;
-
-    text-decoration: none;
+    border-bottom: none;
     transition: all .25s ease;
 }
 
-.reg-button-div-inactive {
-    margin-top: 58px;
-    margin-left: 420px;
-    transform: translate(1000px);
-    transition: all .25s ease;
-
-}
-
-.log-button {
-
-    width: 370px;
-    height: 61px;
-    font-family: Roboto;
-    background: #FFFFFF;
-    border-radius: 50px;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-    outline: none;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-
-}
-
-.log-button-div-inactive {
-    margin-top: 58px;
-    margin-left: 420px;
-    transition: all .25s ease;
-}
-
-.log-button-div-inactive {
-    margin-top: 58px;
-    margin-left: 420px;
-    transition: all .25s ease;
-
-}
-
-.log-button-div-active {
-    margin-top: 58px;
-    margin-left: 420px;
-    transition: all .25s ease;
-    transform: translateY(-450px);
-
-}
+/*login-reg*/

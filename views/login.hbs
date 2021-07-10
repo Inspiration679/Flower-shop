@@ -1,45 +1,56 @@
-<div class="login-registration">
-    <ul>
-        <li class="btn signin-active"><a href="#" >Регистрация</a></li>
-        <li class="btn signup-inactive"><a href="#">Вход</a></li>
-    </ul>
+<script>$(function () {
+    $(".btn").click(function () {
+        $(".registration-active").toggleClass("registration-inactive");
+        $(".login-inactive").toggleClass("login-active");
+        $(".signup-active").toggleClass("signup-inactive");
+        $(".signin-inactive").toggleClass("signin-active");
+
+
+    });
+});</script>
+
+<div>
+    <div class="login-registration">
+        <ul>
+            <li class="btn signup-active"><a href="#" >Регистрация</a></li>
+            <li class="btn signin-inactive"><a href="#" >Вход</a></li>
+        </ul>
+    </div>
+
+    <div class="all">
+        <div class="registration-active">
+            <form>
+                <div class="registration-input1" >
+                    <label for="">Почта:</label>
+                    <input type="text" >
+                </div>
+                <div class="registration-input2" >
+                    <label for="">Пароль:</label>
+                    <input type="password">
+                </div>
+                <div class="registration-input3" >
+                    <label for="">Повторите пароль:</label>
+                    <input  type="password">
+                </div>
+            </form>
+            <div class="registration-button">
+                <button type="submit" >Регистрация</button>
+            </div>
+        </div>
+        <div class="login-inactive">
+            <form>
+                <div class="login-input1" >
+                    <label for="">Логин:</label>
+                    <input type="text" >
+                </div>
+                <div class="login-input2" >
+                    <label for="">Пароль:</label>
+                    <input type="password">
+                </div>
+            </form>
+            <div class="login-button">
+                <button type="submit" >Вход</button>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="all">
-    <div class=" regist-active" >
-        <form action="/login/registration" method="post" class="registr-form"  id="reg" enctype="multipart/form-data">
-            <div class="regist-input1">
-                <label>Email:</label>
-                <input type="email" class="eeee" name="_email">
-            </div>
-            <div class="registr-input2">
-                <label>Пароль:</label>
-                <input type="password" name="password">
-            </div>
-            <div class="registr-input3">
-                <label>Повторите пароль:</label>
-                <input type="password" name="repeatPassword">
-            </div>
-        </form>
-
-    </div>
-    <div class="reg-button-div-active">
-        <button class="reg-button" form="reg" type="submit">Зарегистроваться</button>
-    </div>
-    <div class="login-inactive">
-        <form action="#" class="">
-            <div class="login-input1">
-                <label>Логин:</label>
-                <input  type="text" class=>
-            </div>
-            <div class="login-input2">
-                <label>Пароль:</label>
-                <input type="password">
-            </div>
-        </form>
-    </div>
-    <div class="log-button-div-inactive ">
-        <button class="log-button">Вход</button>
-    </div>
-
-</div>
-
