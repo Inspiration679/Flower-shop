@@ -11,7 +11,9 @@ router.get('/', async (req, res) => {
 
 router.post('/registration', async (req, res, next) => {
     if (req.body.regpassword === req.body.regrepeatpassword) {
-        if (await User.User.findAll({where: {email: req.body.regemail}}).length === 0) {
+        const email = await User.User.findAll({where: {email: req.body.regemail}})
+        console.log(email)
+        if (email.length === 0) {
             try {
                 await User.User.create({
                     password: await bcrypt.hash(req.body.regpassword, bcrypt.genSaltSync(10), null),
@@ -35,7 +37,7 @@ router.post('/registration', async (req, res, next) => {
 })
 
 router.post('/log-in', async (req, res) => {
-    // req.session.user = n
+    req.session.user = await User.User.findAll({where: {email: req.body.loginemail}})
     req.session.isAuthenticated = true
     req.session.save(err => {
         if (err) {
@@ -43,14 +45,7 @@ router.post('/log-in', async (req, res) => {
         }
         res.redirect('/')
     })
-    // const userdata = await User.password.findAll({
-    //     where: {email: req.body.login_email}
-    // })
-    // console.log(userdata)
-    // const compareResult = await bcrypt.compare(userdata.password, bcrypt.genSaltSync(10), (err, res) => {
-    //     return res
-    // })
-    // console.log(compareResult)
+
 })
 router.get('/logout', async (req, res) => {
     req.session.destroy(() => {
