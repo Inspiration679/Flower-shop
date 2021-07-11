@@ -1,7 +1,8 @@
 const {Router} = require('express')
+const auth = require('../middleware/auth')
 const router = Router()
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     console.log(document.cookie)
 
     res.render('cart', {

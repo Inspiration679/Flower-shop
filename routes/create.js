@@ -3,14 +3,15 @@ const Flower = require('../models/Flower')
 const router = Router()
 const path = require('path')
 const fs = require('fs')
+const auth = require('../middleware/auth')
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     res.render('create', {
         title: 'Добавить цветы'
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/', auth,  (req, res) => {
     if(!req.body) return res.sendStatus(400);
     try {
         const flower_name = req.body.flower_name

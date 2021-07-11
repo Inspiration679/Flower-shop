@@ -5,6 +5,8 @@ const path = require('path')
 const multer = require('multer')
 
 const sequelize = require('./db_connect/db')
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+
 const homeRoutes = require('./routes/home')
 const flowersRoutes = require('./routes/flowers')
 const aboutRoutes = require('./routes/about')
@@ -52,7 +54,10 @@ app.use(express.urlencoded({extended: true}))
 app.use(session({
     secret: 'secret value',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new SequelizeStore({
+        db: sequelize
+    })
 }))
 app.use(varMiddleware)
 
