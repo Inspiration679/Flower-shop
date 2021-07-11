@@ -9,24 +9,22 @@ router.get('/', async (req, res) => {
     })
 })
 
-
-
 router.post('/registration', async (req, res, next) => {
-    if (req.body.reg_password === req.body.reg_repeatPassword) {
-        const userEmail = await User.Password.findAll({
-            where: {email: req.body.reg_email}
-        })
-        if (userEmail.length === 0) {
+    if (req.body.regpassword === req.body.regrepeatpassword) {
+        if (await User.User.findAll({where: {email: req.body.regemail}}).length === 0) {
             try {
-                const regPassword = bcrypt.hashSync(req.body.reg_password, bcrypt.genSaltSync(10), null)
-                const regEmail = req.body.reg_email
-
-                await User.Password.create({password: regPassword, email: regEmail})
+                await User.User.create({
+                    password: await bcrypt.hash(req.body.regpassword, bcrypt.genSaltSync(10), null),
+                    email: req.body.regemail,
+                    user_first_name: req.body.user_name,
+                    user_second_name: req.body.user_surname
+                })
                 res.status(200)
-                // res.locals.isAuth = true
                 res.redirect('/')
+                next()
             } catch (e) {
                 console.log(e)
+                res.status(400).send('Упс! Что-то пошло не так(')
             }
         } else {
             res.status(400).send('Такой пользователь уже есть!')
