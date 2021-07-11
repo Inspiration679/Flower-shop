@@ -363,6 +363,7 @@ footer a:hover {
 /*flowers*/
 
 /*login-reg*/
+/*login-reg*/
 .login-registration {
     width: 471px;
     height: 32px;
@@ -398,7 +399,7 @@ footer a:hover {
 
 .registration-active {
     width: 955px;
-    height: 350px;
+    height: 590px;
     transition: all .25s ease;
 
 
@@ -406,7 +407,7 @@ footer a:hover {
 
 .registration-inactive {
     width: 955px;
-    height: 350px;
+    height: 590px;
     transform: translateX(1000px);
     transition: all .25s ease;
 
@@ -463,6 +464,15 @@ footer a:hover {
     margin-top: 63px;
     padding-left: 7px;
 }
+.registration-input4 {
+    margin-top: 63px;
+    padding-left: 195px;
+}
+.registration-input5 {
+    margin-top: 63px;
+    padding-left: 140px;
+}
+
 
 .registration-button {
     margin-top: 47px;
@@ -485,7 +495,7 @@ footer a:hover {
 
 .all {
     width: 955px;
-    height: 410px;
+    height: 590px;
     margin-top: 14px;
     margin-left: 15px;
     overflow: hidden;
@@ -494,7 +504,8 @@ footer a:hover {
 
 .login-inactive {
     width: 955px;
-    height: 350px;
+    height: 590px;
+    margin-bottom: 300px;
     transition: all .25s ease;
 }
 
@@ -535,8 +546,8 @@ footer a:hover {
 
 .login-active {
     width: 955px;
-    height: 350px;
-    transform: translateY(-350px);
+    height: 590px;
+    transform: translateY(-600px);
     transition: all .25s ease;
 }
 

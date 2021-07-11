@@ -1,0 +1,25 @@
+<div>
+    <form action="/user_settings/save" id="save_form" method="post" style="display: flex; flex-direction: column; align-items: baseline">
+        <label>Имя:
+            <input form="save_form" type="text" name="name">
+        </label>
+
+        <label>Фамилия:
+            <input form="save_form" type="text" name="second_name" value="{{}}">
+        </label>
+
+        <label>Email:
+            <input form="save_form" type="email" name="email">
+        </label>
+
+        <label>Пароль:
+            <input form="save_form" type="password" name="password">
+        </label>
+
+        <label>Повторить пароль:
+            <input form="save_form" type="password" name="repeatpassword">
+        </label>
+
+        <button form="save_form" type="submit">Сохранить изменения</button>
+    </form>
+</div>

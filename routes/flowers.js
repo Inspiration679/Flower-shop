@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
         const flowers = await Flower.findAll({
             raw:true
         })
-        console.log(flowers)
         res.render('flowers', {
             title: 'Цветы',
             flowers

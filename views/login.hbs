@@ -8,22 +8,33 @@
 
     <div class="all">
         <div class="registration-active">
-            <form id="reg" action="/login/registration" method="post" enctype="multipart/form-data">
+            <form id="reg" action="/login/registration" method="post">
                 <div class="registration-input1" >
                     <label for="reg">Email:
-                        <input type="email" name="reg_email" required>
+                        <input form="reg" type="email" name="regemail" required>
                     </label>
                 </div>
                 <div class="registration-input2" >
                     <label for="reg">Пароль:
-                        <input type="password" name="reg_password" minlength="8" required>
+                        <input form="reg" type="password" name="regpassword" minlength="8" required>
                     </label>
                 </div>
                 <div class="registration-input3" >
                     <label for="reg">Повторите пароль:
-                        <input  type="password" name="reg_repeatPassword" minlength="8" required>
+                        <input form="reg" type="password" name="regrepeatpassword" minlength="8" required>
                     </label>
                 </div>
+                <div class="registration-input4" >
+                    <label for="reg">Имя:
+                        <input form="reg" type="text" name="user_name" required>
+                    </label>
+                </div>
+                <div class="registration-input5" >
+                    <label for="reg">Фамилия:
+                        <input form="reg" type="text" name="user_surname" required>
+                    </label>
+                </div>
+
             </form>
 
             <div class="registration-button">
@@ -32,15 +43,15 @@
         </div>
 
         <div class="login-inactive">
-            <form id="login" action="/login/log-in" method="post" enctype="multipart/form-data" >
+            <form id="login" action="/login/log-in" method="post">
                 <div class="login-input1" >
                     <label for="login">Email:
-                        <input type="email" name="login_email" required>
+                        <input form="login" type="email" name="loginemail" required>
                     </label>
                 </div>
                 <div class="login-input2" >
                     <label for="login">Пароль:
-                        <input type="password" name="loginPassword" minlength="8" required>
+                        <input form="login" type="password" name="loginPassword" minlength="8" required>
                     </label>
 
                 </div>

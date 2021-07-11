@@ -3,7 +3,6 @@ const exphbs = require('express-handlebars')
 const session = require('express-session')
 const path = require('path')
 const multer = require('multer')
-const passport = require('passport')
 
 const sequelize = require('./db_connect/db')
 const homeRoutes = require('./routes/home')
@@ -56,8 +55,7 @@ app.use(session({
     saveUninitialized: false
 }))
 app.use(varMiddleware)
-app.use(passport.initialize())
-app.use(passport.session())
+
 app.use('/', homeRoutes)
 app.use('/flowers', flowersRoutes)
 app.use('/about', aboutRoutes)
