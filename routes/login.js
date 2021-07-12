@@ -15,14 +15,15 @@ router.post('/registration', async (req, res, next) => {
         console.log(email)
         if (email.length === 0) {
             try {
+                const password = await bcrypt.hash(req.body.regpassword, 10)
                 await User.User.create({
-                    password: await bcrypt.hash(req.body.regpassword, bcrypt.genSaltSync(10), null),
+                    password,
                     email: req.body.regemail,
                     user_first_name: req.body.user_name,
                     user_second_name: req.body.user_surname
                 })
                 res.status(200)
-                res.redirect('/')
+                res.redirect('/login')
                 next()
             } catch (e) {
                 console.log(e)
@@ -37,15 +38,28 @@ router.post('/registration', async (req, res, next) => {
 })
 
 router.post('/log-in', async (req, res) => {
-    req.session.user = await User.User.findAll({where: {email: req.body.loginemail}})
-    req.session.isAuthenticated = true
-    req.session.save(err => {
-        if (err) {
-            throw err
+    try {
+        const email = req.body.loginEmail
+        const password = req.body.loginPassword
+        const candidate = await User.User.findAll({ where: {email} , raw: true})
+        if (candidate) {
+            const areSame = await bcrypt.compare(password, candidate[0].password)
+            if (areSame) {
+                req.session.user = candidate
+                req.session.isAuthenticated = true
+                req.session.save(err => {
+                    if (err) {
+                        throw err
+                    }
+                    res.redirect('/')
+                })
+            }
+        } else {
+            res.redirect('/login')
         }
-        res.redirect('/')
-    })
-
+    } catch (e) {
+        console.log(e)
+    }
 })
 router.get('/logout', async (req, res) => {
     req.session.destroy(() => {
