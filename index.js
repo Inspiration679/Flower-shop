@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const session = require('express-session')
 const path = require('path')
 const multer = require('multer')
+const csrf = require('csurf')
 
 const sequelize = require('./db_connect/db')
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -59,7 +60,9 @@ app.use(session({
         db: sequelize
     })
 }))
+
 app.use(varMiddleware)
+app.use(csrf())
 
 app.use('/', homeRoutes)
 app.use('/flowers', flowersRoutes)
@@ -69,8 +72,6 @@ app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 app.use('/create', createRoutes)
 app.use('/login', loginRoutes)
-
-
 
 app.use(multer({storage:storageConfig, fileFilter: fileFilter}).single("flower_image"));
 
