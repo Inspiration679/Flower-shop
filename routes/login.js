@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
 router.post('/registration', async (req, res, next) => {
     if (req.body.regpassword === req.body.regrepeatpassword) {
         const email = await User.User.findAll({where: {email: req.body.regemail}})
-        console.log(email)
         if (email.length === 0) {
             try {
                 const password = await bcrypt.hash(req.body.regpassword, 10)

@@ -34,8 +34,7 @@
                         <input form="reg" type="text" name="user_surname" required>
                     </label>
                 </div>
-                <input type="hidden" name="_csrf" value="{{@root.csrf}}">
-
+                <input type="hidden" name="_csrf" value="{{csrf}}">
             </form>
 
             <div class="registration-button">
@@ -54,11 +53,8 @@
                     <label for="login">Пароль:
                         <input form="login" type="password" name="loginPassword" minlength="8" required>
                     </label>
-
                 </div>
-
-                <input type="hidden" name="_csrf" value="{{@root.csrf}}">
-                
+                <input type="hidden" name="_csrf" value="{{csrf}}">
             </form>
             <div class="login-button">
                 <button type="submit" form="login">Вход</button>
