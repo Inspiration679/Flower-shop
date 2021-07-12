@@ -34,7 +34,7 @@
                         <input form="reg" type="text" name="user_surname" required>
                     </label>
                 </div>
-
+                <input type="hidden" name="_csrf" value="{{csrf}}">
             </form>
 
             <div class="registration-button">
@@ -46,15 +46,15 @@
             <form id="login" action="/login/log-in" method="post">
                 <div class="login-input1" >
                     <label for="login">Email:
-                        <input form="login" type="email" name="loginemail" required>
+                        <input form="login" type="email" name="loginEmail" required>
                     </label>
                 </div>
                 <div class="login-input2" >
                     <label for="login">Пароль:
                         <input form="login" type="password" name="loginPassword" minlength="8" required>
                     </label>
-
                 </div>
+                <input type="hidden" name="_csrf" value="{{csrf}}">
             </form>
             <div class="login-button">
                 <button type="submit" form="login">Вход</button>
