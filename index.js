@@ -21,8 +21,6 @@ const varMiddleware = require('./middleware/variables')
 
 const app = express()
 
-
-
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs'
@@ -66,7 +64,10 @@ app.use(session({
 
 app.use(csrf())
 app.use(varMiddleware)
-app.use(helmet())
+app.use(helmet({
+    contentSecurityPolicy: false
+}))
+app.use(multer({storage:storageConfig, fileFilter}).single("flower_image"));
 
 app.use('/', homeRoutes)
 app.use('/flowers', flowersRoutes)
@@ -77,7 +78,7 @@ app.use('/support', supportRoutes)
 app.use('/create', createRoutes)
 app.use('/login', loginRoutes)
 
-app.use(multer({storage:storageConfig, fileFilter: fileFilter}).single("flower_image"));
+
 
 const PORT = process.env.PORT || 3000
 
