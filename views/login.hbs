@@ -8,7 +8,8 @@
 
     <div class="all">
         <div class="registration-active">
-            <form id="reg" action="/login/registration" method="post">
+            <form id="reg" action="/login" method="post">
+                <input type="hidden" name="_csrf" value="{{ csrf }}">
                 <div class="registration-input1" >
                     <label for="reg">Email:
                         <input form="reg" type="email" name="regemail" required>
@@ -37,12 +38,13 @@
             </form>
 
             <div class="registration-button">
-                <button type="submit" form="reg">Регистрация</button>
+                <button id="test" type="submit" form="reg">Регистрация</button>
             </div>
         </div>
 
         <div class="login-inactive">
             <form id="login" action="/login/log-in" method="post">
+                <input type="hidden" name="_csrf" value="{{ csrf }}">
                 <div class="login-input1" >
                     <label for="login">Email:
                         <input form="login" type="email" name="loginEmail" required>

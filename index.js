@@ -4,7 +4,6 @@ const session = require('express-session')
 const path = require('path')
 const multer = require('multer')
 const csrf = require('csurf')
-const helmet = require('helmet')
 
 const sequelize = require('./db_connect/db')
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -54,19 +53,15 @@ const fileFilter = (req, file, cb) => {
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
 app.use(session({
-    secret: 'secret value',
+    secret: 'secret value heh',
     resave: false,
     saveUninitialized: false,
     store: new SequelizeStore({
         db: sequelize
     })
 }))
-
 app.use(csrf())
 app.use(varMiddleware)
-app.use(helmet({
-    contentSecurityPolicy: false
-}))
 app.use(multer({storage:storageConfig, fileFilter}).single("flower_image"));
 
 app.use('/', homeRoutes)
@@ -77,8 +72,6 @@ app.use('/cart', cartRoutes)
 app.use('/support', supportRoutes)
 app.use('/create', createRoutes)
 app.use('/login', loginRoutes)
-
-
 
 const PORT = process.env.PORT || 3000
 
@@ -92,7 +85,6 @@ async function start(){
         console.log(e)
     }
 }
-
 start()
 
 
