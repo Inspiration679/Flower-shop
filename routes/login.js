@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     })
 })
 
-router.post('/registration', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     if (req.body.regpassword === req.body.regrepeatpassword) {
         const email = await User.User.findAll({where: {email: req.body.regemail}})
         if (email.length === 0) {
@@ -21,8 +21,7 @@ router.post('/registration', async (req, res, next) => {
                     user_first_name: req.body.user_name,
                     user_second_name: req.body.user_surname
                 })
-                res.status(200)
-                res.redirect('/login')
+                res.status(200).redirect('/')
                 next()
             } catch (e) {
                 console.log(e)

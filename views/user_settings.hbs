@@ -1,5 +1,7 @@
 <div>
     <form action="/user_settings/save" id="save_form" method="post" style="display: flex; flex-direction: column; align-items: baseline">
+        <input type="hidden" name="_csrf" value="{{ csrf }}">
+
         <label>Имя:
             <input form="save_form" type="text" name="name">
         </label>

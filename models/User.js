@@ -24,11 +24,6 @@ const User = sequelize.define('users', {
     email: {
         type: Sequelize.STRING,
         allowNull: false
-    },
-    token: {
-        type: Sequelize.STRING,
-        allowNull: true,
-        defaultValue: true
     }
 }, { timestamps: false })
 
