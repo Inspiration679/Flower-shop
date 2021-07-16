@@ -27,4 +27,4 @@ Test project for training
 <img src="https://user-images.githubusercontent.com/54202786/125955040-9e904e09-98aa-4ee6-a9a6-0d2dcab07d11.png">
 
 <h1>About page:</h1>
-<img src="![image](https://user-images.githubusercontent.com/54202786/125955190-8ecc7f80-802b-4be3-ba4b-d2aec75cb6c7.png)">
+<img src="https://user-images.githubusercontent.com/54202786/125955190-8ecc7f80-802b-4be3-ba4b-d2aec75cb6c7.png">
