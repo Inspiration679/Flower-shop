@@ -21,4 +21,4 @@ Test project for training
 </ul>
 
 <h1>Main page:</h1>
-![image](https://user-images.githubusercontent.com/54202786/125954792-bf40b359-81eb-444c-b9e2-4d39a504ef5e.png)
+<img src="https://user-images.githubusercontent.com/54202786/125954792-bf40b359-81eb-444c-b9e2-4d39a504ef5e.png">
