@@ -9,3 +9,13 @@ Test project for training
   <li>Contacts page</li>
   <li>Social networks</li>
 </ul>
+
+<h1>Plans:</h1>
+<ul>
+  <li>Cart page</li>
+  <li>Edit user page</li>
+  <li>Admin panel</li>
+  <li>Edit items page</li>
+  <li>Deleting user account</li>
+  <li>Order Page</li>
+</ul>
