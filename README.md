@@ -28,3 +28,7 @@ Test project for training
 
 <h1>About page:</h1>
 <img src="https://user-images.githubusercontent.com/54202786/125955190-8ecc7f80-802b-4be3-ba4b-d2aec75cb6c7.png">
+
+<h1>Login/registration page:</h1>
+<img src="https://user-images.githubusercontent.com/54202786/125955350-55ba37ba-ad60-46b6-88a6-07db3eb14164.png">
+
