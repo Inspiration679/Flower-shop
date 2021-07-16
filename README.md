@@ -18,6 +18,7 @@ Test project for training
   <li>Edit items page</li>
   <li>Deleting user account</li>
   <li>Order Page</li>
+  <li>Payment page</li>
 </ul>
 
 <h1>Main page:</h1>
