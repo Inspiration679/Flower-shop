@@ -19,3 +19,6 @@ Test project for training
   <li>Deleting user account</li>
   <li>Order Page</li>
 </ul>
+
+<h1>Main page:</h1>
+![image](https://user-images.githubusercontent.com/54202786/125954792-bf40b359-81eb-444c-b9e2-4d39a504ef5e.png)
