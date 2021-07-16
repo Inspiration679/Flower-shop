@@ -22,3 +22,5 @@ var marker = L.marker([46.65279596926725, 32.600332042976554]).addTo(mymap);
 marker.bindPopup("<b>Карта!</b><br>Местоположение").openPopup();
 circle.bindPopup("I am a circle.");
 polygon.bindPopup("I am a polygon.");
+
+

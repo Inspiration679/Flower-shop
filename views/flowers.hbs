@@ -6,7 +6,7 @@
             <li><a href="#">Название</a></li>
         </ul>
     </div>
-    <div class="flowers-goods">
+    <div class="flowers-goods" id="flowers-goods">
         {{#each flowers}}
             <div class="rectangle">
 
@@ -21,7 +21,7 @@
                     <p>{{cost}}</p>
                 </div>
                 <div class="flower-button">
-                    <button type="submit" >Приобрести цветочки</button>
+                    <button type="submit" name="add_to_cart_button" onclick="add_to_cart({{idflowers}})" id="{{idflowers}}">Приобрести цветочки</button>
                 </div>
             </div>
         {{/each}}

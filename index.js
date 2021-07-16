@@ -4,9 +4,10 @@ const session = require('express-session')
 const path = require('path')
 const multer = require('multer')
 const csrf = require('csurf')
+const User = require('./models/User')
+
 
 const sequelize = require('./db_connect/db')
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const homeRoutes = require('./routes/home')
 const flowersRoutes = require('./routes/flowers')
@@ -56,9 +57,7 @@ app.use(session({
     secret: 'secret value heh',
     resave: false,
     saveUninitialized: false,
-    store: new SequelizeStore({
-        db: sequelize
-    })
+    store: User.store
 }))
 app.use(csrf())
 app.use(varMiddleware)

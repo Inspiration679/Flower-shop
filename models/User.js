@@ -1,6 +1,31 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db_connect/db')
+const session = require('express-session')
+const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
+const tokenStore = sequelize.define("sessions", {
+    sid: {
+        type: Sequelize.STRING,
+        primaryKey: true,
+    },
+    userId: Sequelize.STRING,
+    expires: Sequelize.DATE,
+    data: Sequelize.TEXT,
+});
+
+function extendDefaultFields(defaults, session) {
+    return {
+        data: defaults.data,
+        expires: defaults.expires,
+        userId: session.userId,
+    };
+}
+
+const store =  new SequelizeStore({
+    db: sequelize,
+    table: 'sessions',
+    extendDefaultFields: extendDefaultFields,
+})
 
 const User = sequelize.define('users', {
     iduser: {
@@ -27,7 +52,6 @@ const User = sequelize.define('users', {
     }
 }, { timestamps: false })
 
-
 const Cart = sequelize.define('cart', {
     id_cart: {
         primaryKey: true,
@@ -48,7 +72,5 @@ const Cart = sequelize.define('cart', {
 User.hasMany(Cart, {onDelete: "cascade"})
 Cart.belongsTo(User)
 
-
-
-module.exports = {User, Cart}
+module.exports = {User, Cart, tokenStore, store}
 

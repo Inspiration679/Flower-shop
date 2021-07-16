@@ -43,7 +43,8 @@ router.post('/log-in', async (req, res) => {
         if (candidate) {
             const areSame = await bcrypt.compare(password, candidate[0].password)
             if (areSame) {
-                req.session.user = candidate
+                req.session.user = candidate['email']
+                req.session.id = candidate.iduser
                 req.session.isAuthenticated = true
                 req.session.save(err => {
                     if (err) {
@@ -67,3 +68,5 @@ router.get('/logout', async (req, res) => {
 
 
 module.exports = router
+
+
