@@ -41,6 +41,8 @@
     "sequelize": "^6.6.4"
   },
   "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^2.0.9"
   }
 }
