@@ -1,8 +1,6 @@
 const {Router} = require('express')
 const Flower = require('../models/Flower')
 const router = Router()
-const path = require('path')
-const fs = require('fs')
 const auth = require('../middleware/auth')
 
 router.get('/', auth, (req, res) => {
@@ -32,12 +30,7 @@ router.post('/', auth,  (req, res) => {
     } catch (e) {
         console.log(e)
     }
-
-
-
-
     res.redirect('/create')
-
 })
 
 module.exports = router

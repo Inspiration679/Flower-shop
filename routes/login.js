@@ -40,11 +40,14 @@ router.post('/log-in', async (req, res) => {
         const email = req.body.loginEmail
         const password = req.body.loginPassword
         const candidate = await User.User.findAll({ where: {email} , raw: true})
+
+        console.log(candidate)
+
         if (candidate) {
             const areSame = await bcrypt.compare(password, candidate[0].password)
             if (areSame) {
-                req.session.user = candidate['email']
-                req.session.id = candidate.iduser
+                req.session.user = candidate[0]['email'].toString()
+                req.session.userId = candidate[0]['iduser'].toString()
                 req.session.isAuthenticated = true
                 req.session.save(err => {
                     if (err) {
@@ -60,6 +63,7 @@ router.post('/log-in', async (req, res) => {
         console.log(e)
     }
 })
+
 router.get('/logout', async (req, res) => {
     req.session.destroy(() => {
         res.redirect('/login')

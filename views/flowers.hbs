@@ -20,9 +20,12 @@
                 <div class="flower-price">
                     <p>{{cost}}</p>
                 </div>
-                <div class="flower-button">
-                    <button type="submit" name="add_to_cart_button" onclick="add_to_cart({{idflowers}})" id="{{idflowers}}">Приобрести цветочки</button>
-                </div>
+                <form id="add" action="/flowers/add" method="post">
+                    <input type="hidden" name="_csrf" form="add" value="{{ @root.csrf }}">
+                    <div class="flower-button">
+                        <button type="submit" form="add" id="{{ idflowers }}">Приобрести цветочки</button>
+                    </div>
+                </form>
             </div>
         {{/each}}
     </div>
